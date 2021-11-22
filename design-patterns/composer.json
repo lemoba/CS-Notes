@@ -1,0 +1,27 @@
+{
+    "name": "lemoba/design-patterns",
+    "description": "dsign patterns",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "DsignPatterns\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DsignPatterns\\Testing\\": "tests/"
+        }
+    },
+    "authors": [
+        {
+            "name": "ranen",
+            "email": "lemoba@163.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "phpunit/phpunit": "^9.5",
+        "php": ">=8.0.0"
+    }
+}
