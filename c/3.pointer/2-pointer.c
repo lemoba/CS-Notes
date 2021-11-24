@@ -1,18 +1,23 @@
 #include <stdio.h>
 
-
 int main()
 {
-    int a = 1025;
-    int *p;
-    p = &a;
-    printf("size of integer is %lu\n", sizeof(int));
-    printf("address = %p, value = %d\n", p, *p);
+    int x = 5;
+    int* p = &x;
+    *p = 6;
 
-    char *p0;
-    p0 = (char*)p; //typecasting
-    printf("size of integer is %lu bytes\n", sizeof(char));
-    printf("address = %d, value = %d\n", p0, *p0);
+    int** q = &p;
+    int*** r = &q;
 
+    printf("a address = %p, a value = %d\n", &x, x);
+    printf("p address = %p, p value = %d\n", p, *p);
+    printf("q address = %p, q value = %d\n", *q, *(*q));
+    printf("r address = %p, r value = %d\n", *(*r), *(*(*r)));
+
+    ***r = 10;
+    printf("x value = %d\n", x);
+
+    **q = *p + 2;
+     printf("x value = %d\n", x);
     return 0;
 }
