@@ -152,7 +152,6 @@ select * from threads where thread_id = 36051 \G
   show variables like '%ssl%';
   ```
   
-
 * 安装密码插件
 
   ```sql
@@ -234,7 +233,7 @@ select * from threads where thread_id = 36051 \G
   cat /PATH/error.log | grep temp
   
   #登录mysql
-  mysql -S /tmp/mysql.sock1 -p'password';
+  mysql -S /tmp/mysql.sock1 -p'LJVjzl49quY@';
   
   #修改密码
   set password = 'newPassword';
@@ -256,3 +255,88 @@ select * from threads where thread_id = 36051 \G
   ```
 
   
+
+### 4. mysql8.0 新特性
+
+#### 1. 权限组
+
+* 创建角色
+
+  ```sql
+  create role senior_dba, app_dev; #创建两个角色
+  grant all on *.* to senior_dba with grant option; #给高级dba授予所有权限
+  grant select, insert, update, delete, index on gochat.* to app_dev; #给开发人员设置gochat库的增删改查
+  ```
+  
+* 用户与角色绑定
+
+  ```sql
+  create user 'username'@'%' identified by 'password'; #创建用户
+  grant senior_dba to 'ranen'@'%'; #加入角色
+  ```
+
+  
+
+* 显示用户权限
+
+  ```sql
+  show grants for 'ranen'@'%'; #查看grants
+  show grants for 'ranen'@'%' using senior_dba; #详细信息
+  ```
+
+  
+
+* 删除角色
+
+  ```sql
+  drop role senior_dba;
+  ```
+
+
+### 5. mysql体系
+
+#### 1. 数据库与数据库实例
+
+|                  数据库                  | 数据库实例                                                   |
+| :--------------------------------------: | ------------------------------------------------------------ |
+| 物理操作系统文件或其他形式文件类型的集合 | 1. 由数据库后台进程/线程以及一个共享内存区组成<br/>2. 共享内存可以被后台运行的进程/线程所共享<br/>3. 数据库实例才是真正用来操作数据库文件的 |
+
+#### 2. 基本概念
+
+**1） mysql是单进程多线程架构**
+
+* like microsoft SQL server
+* Oracel多进程架构(expect window)
+
+**2） 插件式存储引擎架构**
+
+* like linux file system
+
+**3） 存储引擎的对象是表**
+
+### 6.日志
+
+#### 1. 慢查询日志
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
