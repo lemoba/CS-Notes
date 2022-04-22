@@ -1,10 +1,12 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Structural\Decorator;
 
 use DsignPatterns\Structural\Decorator\Booking;
 
-class DoubleRoomBooking implements Booking 
+class DoubleRoomBooking implements Booking
 {
     public function calculatePrice(): int
     {

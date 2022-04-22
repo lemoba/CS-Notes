@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -11,9 +13,9 @@ use PHPUnit\Framework\TestCase;
  */
 class PoolTest extends TestCase
 {
-    /** 
+    /**
      * @covers
-     * @test 
+     * @test
      */
     public function testCanGetNewInstancesWithGet()
     {
@@ -26,15 +28,15 @@ class PoolTest extends TestCase
         $this->assertNotSame($worker1, $worker2);
     }
 
-     /** 
-     * @covers
-     * @test 
-     */
+    /**
+    * @covers
+    * @test
+    */
     public function testCanGetSameInstanceTwiceWhenDisposingItFirst()
     {
         // Test
         $pool = new WorkerPool();
-        $worker1 = $pool->get(); 
+        $worker1 = $pool->get();
         $worker2 = $pool->get();
         $pool->dispose($worker1);
         $worker3 = $pool->get();
@@ -44,6 +46,4 @@ class PoolTest extends TestCase
         $this->assertNotSame($worker2, $worker3);
         $this->assertNotSame($worker1, $worker2);
     }
-    
-
 }

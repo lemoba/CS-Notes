@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -12,9 +14,9 @@ use DsignPatterns\Creational\SimpleFactory\SimpleFactory;
  */
 class SimpleFactoryTest extends TestCase
 {
-    /** 
+    /**
      * @covers
-     * @test 
+     * @test
      */
     public function testCanCreateBicyle()
     {
@@ -22,5 +24,4 @@ class SimpleFactoryTest extends TestCase
         $bicyle = (new SimpleFactory())->createBicycle();
         $this->assertInstanceOf(Bicycle::class, $bicyle);
     }
-
 }

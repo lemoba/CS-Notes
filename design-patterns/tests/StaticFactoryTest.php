@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -13,32 +15,31 @@ use DsignPatterns\Creational\StaticFactory\StaticFactory;
  */
 class StaticFactoryTest extends TestCase
 {
-    /** 
+    /**
      * @covers
-     * @test 
+     * @test
      */
     public function testCanCreateNumberFormatter()
     {
         $this->assertInstanceOf(Formatter::class, StaticFactory::factory('number'));
     }
 
-     /** 
-     * @covers
-     * @test 
-     */
+    /**
+    * @covers
+    * @test
+    */
     public function testCanCreateStringFormatter()
     {
         $this->assertInstanceOf(Formatter::class, StaticFactory::factory('string'));
     }
 
-    /** 
+    /**
      * @covers
-     * @test 
+     * @test
      */
     public function testException()
     {
         $this->expectException(InvalidArgumentException::class);
         StaticFactory::factory('object');
     }
-
 }

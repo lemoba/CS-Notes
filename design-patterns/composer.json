@@ -21,7 +21,10 @@
     ],
     "minimum-stability": "stable",
     "require": {
-        "phpunit/phpunit": "^9.5",
-        "php": ">=8.0.0"
+        "php": ">=7.4",
+        "phpunit/phpunit": "^9.5"
+    },
+    "scripts": {
+        "fix": ["php-cs-fixer fix ."]
     }
 }

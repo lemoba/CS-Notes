@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Creational\Pool;
 
@@ -11,7 +13,7 @@ class WorkerPool implements Countable
 
     public function get(): StringReverseWorker
     {
-        if (count($this->freeWorkers) == 0){
+        if (count($this->freeWorkers) == 0) {
             $worker = new StringReverseWorker();
         } else {
             $worker = array_pop($this->freeWorkers);

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Creational\StaticFactory;
 
@@ -10,11 +12,10 @@ final class StaticFactory
     {
         if ($type == 'number') {
             return new FormatNumber();
-        }else if ($type == 'string') {
+        } elseif ($type == 'string') {
             return new FormatString();
         }
 
         throw new InvalidArgumentException('Unknown format given');
     }
 }
-

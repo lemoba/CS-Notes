@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -12,9 +14,9 @@ use DsignPatterns\Creational\Prototype\FooBookPrototype;
  */
 class PrototypeTest extends TestCase
 {
-    /** 
+    /**
      * @covers
-     * @test 
+     * @test
      */
     public function testCanGetFooBook()
     {
@@ -34,5 +36,4 @@ class PrototypeTest extends TestCase
             $this->assertInstanceOf(BarBookPrototype::class, $book);
         }
     }
-
 }

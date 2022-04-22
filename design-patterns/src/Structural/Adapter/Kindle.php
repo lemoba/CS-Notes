@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Structural\Adapter;
 
@@ -11,7 +13,6 @@ class Kindle implements EBook
 
     public function unlock()
     {
-
     }
 
     public function pressNext()
@@ -23,5 +24,4 @@ class Kindle implements EBook
     {
         return [$this->page, $this->totalPages];
     }
-    
 }

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Structural\Adapter;
 
@@ -9,6 +11,4 @@ interface EBook
     public function pressNext();
 
     public function getPage(): array;
-
 }
- 

@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -30,6 +32,6 @@ class DirectorTest extends TestCase
         $carBuilder = new CarBuilder();
         $newVehicle = (new Director())->build($carBuilder);
 
-        $this->assertInstanceOf(Car::class, $newVehicle);   
+        $this->assertInstanceOf(Car::class, $newVehicle);
     }
 }

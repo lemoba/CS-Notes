@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -16,8 +18,8 @@ class DecoratorTest extends TestCase
     {
         // Test
         $booking = new DoubleRoomBooking();
-        
+
         $this->assertSame(666, $booking->calculatePrice());
-        $this->assertSame('double room', $booking->getDescription());     
+        $this->assertSame('double room', $booking->getDescription());
     }
 }

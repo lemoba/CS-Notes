@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -14,8 +16,8 @@ use DsignPatterns\Creational\FactoryMethod\StdoutLoggerFactory;
  */
 class FactoryMethodTest extends TestCase
 {
-    /** 
-     * @test 
+    /**
+     * @test
      * @covers
      */
     public function testCanCreateStdoutLogging()
@@ -26,8 +28,8 @@ class FactoryMethodTest extends TestCase
         $this->assertInstanceOf(StdoutLogger::class, $logger);
     }
 
-    /** 
-     * @test 
+    /**
+     * @test
      * @covers
      */
     public function testCanCreateFileLogging()

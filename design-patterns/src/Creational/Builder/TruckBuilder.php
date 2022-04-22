@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Creational\Builder;
 
@@ -8,7 +10,7 @@ use DsignPatterns\Creational\Builder\Parts\Wheel;
 use DsignPatterns\Creational\Builder\Parts\Engine;
 use DsignPatterns\Creational\Builder\Parts\Vehicle;
 
-class TruckBuilder implements Builder 
+class TruckBuilder implements Builder
 {
     private Truck $truck;
 
@@ -17,7 +19,7 @@ class TruckBuilder implements Builder
         $this->truck->setPart('rightDoor', new Door());
         $this->truck->setPart('leftDoor', new Door());
     }
-    
+
     public function addWheel()
     {
         $this->truck->setPart('wheel1', new Wheel());
@@ -37,7 +39,7 @@ class TruckBuilder implements Builder
     {
         $this->truck = new Truck();
     }
-   
+
 
     public function getVehicle(): Vehicle
     {

@@ -1,8 +1,9 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Creational\Builder\Parts;
 
-class Car extends Vehicle 
+class Car extends Vehicle
 {
-    
 }

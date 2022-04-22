@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -26,8 +28,9 @@ class CompositeTest extends TestCase
 
         $form->addElement($embed);
 
-        $this->assertSame('<form>Email:<input type="text" /><form>Password:<input type="text" /></form></form>', 
-        $form->render());       
+        $this->assertSame(
+            '<form>Email:<input type="text" /><form>Password:<input type="text" /></form></form>',
+            $form->render()
+        );
     }
-
 }

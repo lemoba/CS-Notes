@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Structural\Composite;
 
@@ -9,7 +11,7 @@ class Form implements Renderable
     public function render(): string
     {
         $formCode = '<form>';
-        
+
         foreach ($this->elements as $elements) {
             $formCode .= $elements->render();
         }
@@ -22,4 +24,3 @@ class Form implements Renderable
         $this->elements[] = $element;
     }
 }
-

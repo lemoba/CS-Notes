@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -37,6 +39,6 @@ class AdapterTest extends TestCase
         $book->open();
         $book->turnPage();
 
-        $this->assertSame(2, $book->getPage());
+        $this->assertSame(1, $book->getPage());
     }
 }

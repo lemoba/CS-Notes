@@ -1,4 +1,6 @@
-<?php declare(strict_types=1);
+<?php
+
+declare(strict_types=1);
 
 namespace DsignPatterns\Testing;
 
@@ -11,7 +13,7 @@ use DsignPatterns\Creational\Singleton\Singleton;
  */
 class SingletonTest extends TestCase
 {
-    /** 
+    /**
      * @covers
      * @test
      */
@@ -24,5 +26,4 @@ class SingletonTest extends TestCase
         $this->assertInstanceOf(Singleton::class, $firstCall);
         $this->assertSame($firstCall, $secondCall);
     }
-
 }
